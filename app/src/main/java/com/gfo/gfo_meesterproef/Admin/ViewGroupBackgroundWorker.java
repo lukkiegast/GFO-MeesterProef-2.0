@@ -1,13 +1,9 @@
 package com.gfo.gfo_meesterproef.Admin;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.gfo.gfo_meesterproef.R;
-import com.gfo.gfo_meesterproef.User.UserActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,56 +13,61 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import static com.gfo.gfo_meesterproef.R.id.userList;
-
-public class ViewGroupBackgroundWorker extends AsyncTask<String, Void, String> {
+public class ViewGroupBackgroundWorker extends AsyncTask<String, Void, List<String>> {
 
     Context context;
-    ListView testlist;
 
     ViewGroupBackgroundWorker(Context ctx) {
         context = ctx;
     }
 
     @Override
-    protected String doInBackground(String... params) {
+    protected List<String> doInBackground(String... params) {
         String type = params[0];
         String view_url = "https://mantixcloud.nl/gfo/viewgroups.php";
+        String result;
+        String[] splitResultArray;
+        List<String> splitResultList = new ArrayList<String>();
         if (type.equals("view")) {
             try {
+//                connect to database
                 URL url = new URL(view_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
+//                receive data
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
-                String result = "";
+                result = "";
                 String line = "";
                 while ((line = bufferedReader.readLine()) != null) {
                     result += line;
                 }
+//                split result at spaces into array
+                splitResultArray = result.split("\\s+");
+                splitResultList = (Arrays.asList(splitResultArray));
+
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
-                return result;
+                return splitResultList;
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-
-        return null;
-
+        return splitResultList;
     }
 
     @Override
     protected void onPreExecute() { }
 
     @Override
-    protected void onPostExecute(String result) { }
+    protected void onPostExecute(List<String> splitResultList) { }
 
 }
