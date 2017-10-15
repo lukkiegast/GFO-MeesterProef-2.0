@@ -21,12 +21,12 @@ import java.util.List;
 
 import static com.gfo.gfo_meesterproef.R.id.userList;
 
-public class ViewFileBackgroundWorker extends AsyncTask<String, Void, String> {
+public class ViewGroupBackgroundWorker extends AsyncTask<String, Void, String> {
 
     Context context;
     ListView testlist;
 
-    ViewFileBackgroundWorker(Context ctx) {
+    ViewGroupBackgroundWorker(Context ctx) {
         context = ctx;
     }
 
