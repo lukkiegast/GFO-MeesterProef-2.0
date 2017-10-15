@@ -13,7 +13,7 @@ public class ViewFileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_file);
 
         String type = "view";
-        com.gfo.gfo_meesterproef.Admin.ViewFileBackgroundWorker backgroundWorker = new com.gfo.gfo_meesterproef.Admin.ViewFileBackgroundWorker(this);
+        com.gfo.gfo_meesterproef.Admin.ViewGroupBackgroundWorker backgroundWorker = new com.gfo.gfo_meesterproef.Admin.ViewGroupBackgroundWorker(this);
         backgroundWorker.execute(type);
 
     }
