@@ -5,8 +5,11 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gfo.gfo_meesterproef.R;
@@ -19,7 +22,8 @@ import static com.gfo.gfo_meesterproef.LoginActivity.contextOfApplication;
 
 public class UserActivity extends AppCompatActivity {
 
-    private ListView userList;
+    ListView userGroupList;
+    String selectedGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +45,25 @@ public class UserActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 //        fill listView with (array)List
-        userList = (ListView) findViewById(R.id.userList);
+        userGroupList = (ListView) findViewById(R.id.userGroupList);
         ArrayAdapter<String> groupAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, groups);
-        userList.setAdapter(groupAdapter);
+        userGroupList.setAdapter(groupAdapter);
+
+        registerGroupClickCallback();
+    }
+
+//    select group
+    private void registerGroupClickCallback() {
+        userGroupList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                TextView textView = (TextView) viewClicked;
+                selectedGroup = textView.getText().toString();
+
+                Toast.makeText(UserActivity.this,
+                        selectedGroup, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
