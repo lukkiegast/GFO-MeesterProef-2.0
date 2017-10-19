@@ -1,5 +1,8 @@
 package com.gfo.gfo_meesterproef.Admin;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +38,7 @@ public class ViewGroupActivity extends AppCompatActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+
 //        fill listView with (array)List
         adminGroupList = (ListView) findViewById(R.id.adminGroupList);
         ArrayAdapter<String> groupAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, groups);
@@ -51,8 +55,10 @@ public class ViewGroupActivity extends AppCompatActivity {
                 TextView textView = (TextView) viewClicked;
                 selectedGroup = textView.getText().toString();
 
-                Toast.makeText(ViewGroupActivity.this,
-                        selectedGroup, Toast.LENGTH_LONG).show();
+//                start ViewFileActivity
+                Intent i = new Intent(ViewGroupActivity.this, ViewFileActivity.class);
+                i.putExtra("group", selectedGroup);
+                startActivity(i);
             }
         });
     }

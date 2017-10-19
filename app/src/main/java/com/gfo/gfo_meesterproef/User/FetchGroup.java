@@ -47,7 +47,6 @@ public class FetchGroup extends AsyncTask<String, Void, List<String>> {
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
-
 //                send data
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
@@ -56,7 +55,6 @@ public class FetchGroup extends AsyncTask<String, Void, List<String>> {
                 bufferedWriter.flush();
                 bufferedWriter.close();
                 outputStream.close();
-
 //                receive data
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));

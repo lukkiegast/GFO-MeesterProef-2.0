@@ -7,7 +7,7 @@
     tools:context="com.gfo.gfo_meesterproef.User.FetchFileActivity"
     android:orientation="vertical">
 
-    <ListView android:id="@+id/userProducts"
+    <ListView android:id="@+id/userProductsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

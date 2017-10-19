@@ -2165,7 +2165,7 @@ containing a value of this type.
         public static final int notify_panel_notification_icon_bg=0x7f02005c;
     }
     public static final class id {
-        public static final int AccountsList=0x7f0b0064;
+        public static final int AccountsList=0x7f0b0062;
         public static final int action0=0x7f0b0068;
         public static final int action_bar=0x7f0b0048;
         public static final int action_bar_activity_content=0x7f0b0000;
@@ -2189,8 +2189,8 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0b0028;
         public static final int activity_login=0x7f0b005e;
         public static final int add=0x7f0b0013;
-        public static final int adminGroupList=0x7f0b0062;
-        public static final int adminProducts=0x7f0b0063;
+        public static final int adminGroupList=0x7f0b0064;
+        public static final int adminProductsList=0x7f0b0063;
         public static final int alertTitle=0x7f0b003c;
         public static final int always=0x7f0b001e;
         public static final int beginning=0x7f0b001b;
@@ -2285,8 +2285,8 @@ containing a value of this type.
         public static final int topPanel=0x7f0b003a;
         public static final int up=0x7f0b0008;
         public static final int useLogo=0x7f0b0012;
-        public static final int userGroupList=0x7f0b005c;
-        public static final int userProducts=0x7f0b005d;
+        public static final int userGroupList=0x7f0b005d;
+        public static final int userProductsList=0x7f0b005c;
         public static final int withText=0x7f0b0022;
         public static final int wrap_content=0x7f0b0019;
     }
@@ -2330,9 +2330,9 @@ containing a value of this type.
         public static final int activity_fetch_file=0x7f04001e;
         public static final int activity_fetch_group=0x7f04001f;
         public static final int activity_login=0x7f040020;
-        public static final int activity_view_file=0x7f040021;
-        public static final int activity_view_group=0x7f040022;
-        public static final int activity_view_account =0x7f040023;
+        public static final int activity_view_account=0x7f040021;
+        public static final int activity_view_file=0x7f040022;
+        public static final int activity_view_group=0x7f040023;
         public static final int notification_action=0x7f040024;
         public static final int notification_action_tombstone=0x7f040025;
         public static final int notification_media_action=0x7f040026;
