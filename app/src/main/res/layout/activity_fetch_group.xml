@@ -4,14 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gfo.gfo_meesterproef.Admin.ViewFileActivity">
+    tools:context="com.gfo.gfo_meesterproef.User.FetchGroupActivity"
+    android:orientation="vertical">
 
-
-    <ListView android:id="@+id/fileList"
+    <ListView android:id="@+id/userGroupList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+    </ListView>
 
+    <ListView android:id="@+id/userProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     </ListView>
 
 </LinearLayout>

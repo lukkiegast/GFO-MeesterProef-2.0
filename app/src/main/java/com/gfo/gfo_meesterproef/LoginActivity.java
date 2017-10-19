@@ -10,7 +10,7 @@ import android.widget.Toast;
 import android.content.SharedPreferences;
 
 import com.gfo.gfo_meesterproef.Admin.AdminActivity;
-import com.gfo.gfo_meesterproef.User.UserActivity;
+import com.gfo.gfo_meesterproef.User.FetchGroupActivity;
 
 import java.util.concurrent.ExecutionException;
 
@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                 this.startActivity(i);
                 break;
             case "ï»¿n":
-                Intent k = new Intent(this, UserActivity.class);
+                Intent k = new Intent(this, FetchGroupActivity.class);
                 this.startActivity(k);
                 break;
             default:

@@ -18,11 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".User.UserActivity" />
+        <activity android:name=".User.FetchGroupActivity" />
         <activity android:name=".Admin.AdminActivity" />
         <activity android:name=".Admin.AddAccountActivity" />
         <activity android:name=".Admin.ViewAccountActivity" />
-        <activity android:name=".Admin.ViewFileActivity"></activity>
+        <activity android:name=".Admin.ViewGroupActivity"></activity>
     </application>
 
 </manifest>

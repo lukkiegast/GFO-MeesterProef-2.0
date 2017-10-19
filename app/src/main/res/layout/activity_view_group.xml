@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gfo.gfo_meesterproef.User.UserActivity">
+    tools:context="com.gfo.gfo_meesterproef.Admin.ViewGroupActivity"
+    android:orientation="vertical">
 
-    <ListView android:id="@+id/userList"
+
+    <ListView android:id="@+id/adminGroupList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </ListView>
+
+    <ListView android:id="@+id/adminProducts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

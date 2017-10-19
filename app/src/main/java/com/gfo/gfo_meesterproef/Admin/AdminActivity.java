@@ -27,7 +27,7 @@ public class AdminActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void ViewProductActivity (View view){
-        Intent i = new Intent(this, ViewFileActivity.class);
+        Intent i = new Intent(this, ViewGroupActivity.class);
         startActivity(i);
     }
 
