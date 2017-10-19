@@ -22,7 +22,9 @@
         <activity android:name=".Admin.AdminActivity" />
         <activity android:name=".Admin.AddAccountActivity" />
         <activity android:name=".Admin.ViewAccountActivity" />
-        <activity android:name=".Admin.ViewGroupActivity"></activity>
+        <activity android:name=".Admin.ViewGroupActivity" />
+        <activity android:name=".Admin.ViewFileActivity" />
+        <activity android:name=".User.FetchFileActivity"></activity>
     </application>
 
 </manifest>
