@@ -1,11 +1,9 @@
 package com.gfo.gfo_meesterproef.Admin;
 
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.gfo.gfo_meesterproef.R;
 
