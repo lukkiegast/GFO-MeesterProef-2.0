@@ -25,8 +25,6 @@ public class ViewFileActivity extends AppCompatActivity {
 //        get selected group from ViewGroupActivity
         String group = getIntent().getExtras().getString("group","x");
 
-//        STILL WORKS
-
 //        contact database for products
         String type = "view";
         List<String> products = new ArrayList<String>();
