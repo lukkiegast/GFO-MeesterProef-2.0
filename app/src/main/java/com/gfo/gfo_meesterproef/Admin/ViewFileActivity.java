@@ -21,7 +21,7 @@ public class ViewFileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_file);
 
 //        get selected group from ViewGroupActivity
-        String group = getIntent().getExtras().getString("group","x");
+        String group = getIntent().getExtras().getString("group","");
 
 //        contact database for products
         String type = "view";
