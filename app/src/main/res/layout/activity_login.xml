@@ -1,39 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="15dp"
     tools:context="com.gfo.gfo_meesterproef.LoginActivity"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username" />
+        android:text="Login"
+        android:textSize="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView4" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/textView"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
     <EditText
         android:id="@+id/editTextUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:hint="Username"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password" />
+        android:text="Password"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/editTextUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
 
     <EditText
         android:id="@+id/editTextPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:textSize="15dp"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:onClick="login"
-        android:text="Login" />
+        android:text="Login"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp" />
 
-</LinearLayout>
+</RelativeLayout>
