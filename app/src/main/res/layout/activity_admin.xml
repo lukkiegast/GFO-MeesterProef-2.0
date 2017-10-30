@@ -1,55 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     android:orientation="vertical"
-    tools:context="com.gfo.gfo_meesterproef.Admin.AdminActivity">
-
-    <TextView android:onClick="AddUserActivity"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textColor="#000000"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:textSize="20sp"
-        android:text="Gebruiker toevoegen"/>
-
-    <TextView android:onClick="ViewUserActivity"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textColor="#000000"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:textSize="20sp"
-        android:text="Gebruikers bekijken/verwijderen"/>
+    tools:context="com.gfo.gfo_meesterproef.Admin.AdminActivity"
+    android:weightSum="1">
 
     <TextView
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textColor="#000000"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:textSize="20sp"
-        android:text="  Product toevoegen"/>
-
-    <TextView android:onClick="ViewProductActivity"
         android:layout_height="wrap_content"
+        android:text="Admin"
+        android:textSize="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView3" />
+    <Button
+        android:id="@+id/gebruikertoevoegen"
         android:layout_width="wrap_content"
-        android:textColor="#000000"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:textSize="20sp"
-        android:text="Producten bekijken/verwijderen"/>
-
-    <TextView
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textColor="#000000"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:textSize="20sp"
-        android:text="  Product koppelen aan gebruiker"/>
+        android:onClick="AddUserActivity"
+        android:visibility="invisible"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/productenbekijkenverwijderen"
+        android:layout_alignLeft="@+id/Gebruikerbekijkenverwijderen"
+        android:layout_alignStart="@+id/Gebruikerbekijkenverwijderen" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/Gebruikerbekijkenverwijderen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ViewUserActivity"
+        android:visibility="invisible"
+        android:layout_above="@+id/gebruikertoevoegen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp" />
+
+
+    <Button
+        android:id="@+id/productenbekijkenverwijderen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ViewProductActivity"
+        android:visibility="invisible"
+        android:layout_marginTop="121dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="47dp"
+        android:layout_marginEnd="47dp" />
+
+    <Button
+        android:id="@+id/productkoppelen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ViewLinkToUser"
+        android:visibility="invisible"
+        android:layout_alignBaseline="@+id/gebruikertoevoegen"
+        android:layout_alignBottom="@+id/gebruikertoevoegen"
+        android:layout_alignLeft="@+id/productenbekijkenverwijderen"
+        android:layout_alignStart="@+id/productenbekijkenverwijderen" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/logo"
+        android:id="@+id/imageView"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
